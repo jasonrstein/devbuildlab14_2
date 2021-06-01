@@ -1,0 +1,44 @@
+﻿@model List<Questions>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Questions Posted By Users</h1>
+
+<table style="width:75%">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Title</th>
+        <th>Details</th>
+        <th>Category</th>
+        <th>Posted</th>
+        <th>Tags</th>
+        <th>Status</th>
+    </tr>
+    <tbody>
+
+        @foreach (Questions ques in Model)
+        {
+        <tr>
+            <td>@ques.id</td>
+            <td>@ques.username</td>
+            <td>@ques.title </td>
+            <td>@ques.detail </td>
+            <td>@ques.category </td>
+            <td>@ques.posted </td>
+            <td>@ques.tags </td>
+            <td>@ques.status </td>
+            <td>
+                <a href="/questions/editquestionform/@ques.id" style="font-size:x-small" class="btn btn-info"> Edit</a>
+                <a href="/questions/deletequestion/@ques.id" style="font-size:x-small" class="btn btn-danger"> Delete</a>
+            </td>
+
+        </tr>
+
+        }
+    </tbody>
+</table><br />
+
+<h3><a href="questions/AskQuestionForm">Please submit a question</a></h3>
+
