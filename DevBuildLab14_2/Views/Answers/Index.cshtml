@@ -1,8 +1,40 @@
-﻿
+﻿@model List<Answers>
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>All Answers Provided by Users</h1>
+<h1>Answers Posted By Users</h1>
 
+<table style="width:75%">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Detail</th>
+        <th>Question ID</th>
+        <th>Date Posted</th>
+        <th>UpVotes</th>
+    </tr>
+    <tbody>
 
+        @foreach (Answers ans in Model)
+        {
+            <tr>
+                <td>@ans.id</td>
+                <td>@ans.username</td>
+                <td>@ans.detail </td>
+                <td>@ans.questionID </td>
+                <td>@ans.posted </td>
+                <td>@ans.upvotes </td>
+                <td>
+                    <a href="/answers/editanswerform/@ans.id" style="font-size:x-small" class="btn btn-info"> Edit</a>
+                    <a href="/answers/deleteanswer/@ans.id" style="font-size:x-small" class="btn btn-danger"> Delete</a>
+                </td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+<br />
+
+<h3><a href="/answers/AddAnswerForm">Please submit an answer</a></h3>

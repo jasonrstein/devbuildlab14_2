@@ -24,6 +24,11 @@ namespace DevBuildLab14_2.Controllers
             return View();
         }
 
+        public IActionResult AddQuestionForm()
+        {
+            return View();
+        }
+
         public IActionResult AddQuestion(Questions que)
         {
             DAL.AddQuestion(que);
@@ -58,6 +63,6 @@ namespace DevBuildLab14_2.Controllers
         {
             DAL.DeleteQuestion(id);
             return RedirectToAction("index");
-        }
+        }        
     }
 }

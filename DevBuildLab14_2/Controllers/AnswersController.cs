@@ -24,29 +24,33 @@ namespace DevBuildLab14_2.Controllers
             return View();
         }
 
-        public IActionResult AskAnswer()
+        public IActionResult AddAnswerForm()
         {
             return View();
         }
 
-        public IActionResult AddAnswer()
+        public IActionResult AddAnswer(Answers ans)
         {
-            return View();
+            DAL.AddAnswer(ans);
+            return RedirectToAction("Index");
         }
 
-        public IActionResult EditAnswerForm()
+        public IActionResult EditAnswerForm(int id)
         {
-            return View();
+            Answers ans = DAL.ReadOneAnswers(id);
+            return View(ans);
         }
 
-        public IActionResult EditAnswer()
+        public IActionResult EditAnswer(Answers ans)
         {
-            return View();
+            DAL.EditAnswer(ans);
+            return RedirectToAction("index"); 
         }
 
-        public IActionResult DeleteAnswer()
+        public IActionResult DeleteAnswer(int id)
         {
-            return View();
+            DAL.DeleteAnswer(id);
+            return RedirectToAction("index");
         }
     }
 }

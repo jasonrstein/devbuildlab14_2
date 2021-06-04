@@ -411,3 +411,5 @@ C:\Workgroup\StackOverFlow\DevBuildLab14_2\obj\Debug\netcoreapp3.1\Razor\Views\A
 C:\Workgroup\StackOverFlow\DevBuildLab14_2\obj\Debug\netcoreapp3.1\Razor\Views\Questions\Index.cshtml.g.cs
 C:\Workgroup\StackOverFlow\DevBuildLab14_2\obj\Debug\netcoreapp3.1\Razor\Views\Questions\AskQuestionForm.cshtml.g.cs
 C:\Workgroup\StackOverFlow\DevBuildLab14_2\obj\Debug\netcoreapp3.1\Razor\Views\Questions\EditQuestionForm.cshtml.g.cs
+C:\Workgroup\StackOverFlow\DevBuildLab14_2\obj\Debug\netcoreapp3.1\Razor\Views\Answers\AddAnswerForm.cshtml.g.cs
+C:\Workgroup\StackOverFlow\DevBuildLab14_2\obj\Debug\netcoreapp3.1\Razor\Views\Answers\EditAnswerForm.cshtml.g.cs

@@ -61,7 +61,18 @@ namespace DevBuildLab14_2.Models
 
         public static void AddAnswer(Answers ans)
         {
+            ans.posted = DateTime.Today;
             db.Insert(ans);
+        }
+
+        public static Answers ReadOneAnswers(int id)
+        {
+            return db.Get<Answers>(id);
+        }
+
+        public static void EditAnswer(Answers ans)
+        {
+            db.Update(ans);
         }
     }
 }
